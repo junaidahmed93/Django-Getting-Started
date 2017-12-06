@@ -20,7 +20,6 @@ class Ticket(models.Model):
         (2,'Minor')
     )
     created = models.DateTimeField(auto_now_add=True)
-    # assignee = models.CharField(max_length=90, blank=True)
     assignee = models.ForeignKey('auth.User', related_name='assignee') 
     reporter = models.CharField(max_length=100, blank=True)
     description = models.TextField() 
